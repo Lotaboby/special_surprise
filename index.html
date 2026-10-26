@@ -26,7 +26,7 @@ scenes.forEach((_,i)=>{let d=document.createElement('span');d.className='dot'+(i
 function go(n){current=n;scenes.forEach((s,i)=>s.classList.toggle('active',i===n));[...dots.children].forEach((d,i)=>d.classList.toggle('on',i===n));window.scrollTo({top:0,behavior:'smooth'})}
 function togglePlay(){
  const button=document.getElementById('play'),note=document.getElementById('musicNote'),bar=document.getElementById('bar');
- if(song.paused){song.play().then(()=>{button.textContent='Ⅱ';note.textContent='Now playing ♡';bar.style.transition='width 12s linear';bar.style.width='100%'}).catch(()=>{button.textContent='▶';note.textContent='Could not play. Check love-song.mp3 is uploaded beside index.html.'})}
+ if(song.paused){song.play().then(()=>{button.textContent='Ⅱ';note.textContent='Now playing ♡';bar.style.transition='width 12s linear';bar.style.width='100%'}).catch(()=>{button.textContent='▶';note.textContent='Could not play. Check (L°^°L).mp3 is uploaded beside index.html.'})}
  else{song.pause();button.textContent='▶';note.textContent='Music paused ♡';bar.style.transition='none';bar.style.width='0%'}
 }
 song.addEventListener('ended',()=>{document.getElementById('play').textContent='▶';document.getElementById('musicNote').textContent='Press play to listen ♡';document.getElementById('bar').style.width='0%'});
